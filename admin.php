@@ -9,6 +9,16 @@ if(isset($_GET['delete'])){
 }
 ?>
 
+<?php
+session_start();
+include 'db.php';
+
+if(!isset($_SESSION['admin'])){
+    header("Location: login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
