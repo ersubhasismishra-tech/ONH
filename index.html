@@ -3,206 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Nursing Home</title>
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<style>
-body{
-    font-family: Arial, sans-serif;
-    background:#f4f6f9;
-}
-
-.hero{
-    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-    url('https://images.unsplash.com/photo-1580281657521-5a5e8d6c6b7e');
-    background-size:cover;
-    background-position:center;
-    color:white;
-    padding:120px 20px;
-    text-align:center;
-}
-
-.section{
-    padding:60px 20px;
-}
-
-.card{
-    border:none;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
-
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    font-size:24px;
-    padding:15px;
-    border-radius:50%;
-    text-decoration:none;
-}
-
-.call-btn{
-    background:red;
-    color:white;
-    padding:8px 15px;
-    border-radius:5px;
-    text-decoration:none;
-}
-</style>
-
+<title>Om Nursing Home</title>
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-<div class="container">
-<a class="navbar-brand" href="#">🏥 My Nursing Home</a>
-<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-<span class="navbar-toggler-icon"></span>
-<a href="logout.php" class="btn btn-danger">Logout</a>
-</button>
+<header>
+    OM NURSING HOME
+</header>
 
-<div class="collapse navbar-collapse" id="menu">
-<ul class="navbar-nav ms-auto">
-<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-<li class="nav-item"><a class="nav-link" href="#doctors">Doctors</a></li>
-<li class="nav-item"><a class="nav-link" href="#appointment">Appointment</a></li>
-<li class="nav-item">
-<a href="tel:+916370016449" class="call-btn">📞 Call Now</a>
-</li>
-</ul>
-</div>
-</div>
-</nav>
-
-<!-- Hero Section -->
 <section class="hero">
-<h1>Welcome to Our Nursing Home</h1>
-<p>Quality Healthcare With Compassion</p>
-<a href="#appointment" class="btn btn-light mt-3">Book Appointment</a>
+    <h1>Quality Healthcare You Can Trust</h1>
+    <p>24/7 Emergency | Experienced Doctors | Modern Facilities</p>
 </section>
 
-<!-- About Section -->
-<section id="about" class="section text-center">
-<div class="container">
-<h2>About Us</h2>
-<p>We provide 24/7 emergency services, experienced doctors, modern medical equipment and patient-friendly environment.</p>
-</div>
+<section class="section">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service-box">
+            <h3>General Checkup</h3>
+            <p>Complete health examination</p>
+        </div>
+        <div class="service-box">
+            <h3>Emergency Care</h3>
+            <p>Immediate medical assistance</p>
+        </div>
+        <div class="service-box">
+            <h3>Laboratory</h3>
+            <p>Advanced diagnostic services</p>
+        </div>
+    </div>
 </section>
 
-<!-- Doctor Section -->
-<section id="doctors" class="section bg-light">
-<div class="container">
-<h2 class="text-center mb-4">Our Doctors</h2>
+<section class="section">
+    <h2>Book Appointment</h2>
 
-<div class="row">
-<div class="col-md-4">
-<div class="card p-3 text-center">
-<img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle mx-auto" width="120">
-<h5 class="mt-3">Dr. Sharma</h5>
-<p>Cardiologist</p>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="card p-3 text-center">
-<img src="https://randomuser.me/api/portraits/women/45.jpg" class="rounded-circle mx-auto" width="120">
-<h5 class="mt-3">Dr. Das</h5>
-<p>Gynecologist</p>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="card p-3 text-center">
-<img src="https://randomuser.me/api/portraits/men/75.jpg" class="rounded-circle mx-auto" width="120">
-<h5 class="mt-3">Dr. Patel</h5>
-<p>Orthopedic</p>
-</div>
-</div>
-
-</div>
-</div>
+    <div class="booking-container">
+        <input type="text" id="name" placeholder="Patient Name" required>
+        <input type="text" id="phone" placeholder="Phone Number" required>
+        <input type="date" id="date" required>
+        <textarea id="problem" placeholder="Describe Problem"></textarea>
+        <button onclick="sendWhatsApp()">Send via WhatsApp</button>
+    </div>
 </section>
 
-<!-- Appointment Section -->
-<section id="appointment" class="section">
-<div class="container">
-<h2 class="text-center mb-4">Book Appointment</h2>
+<footer>
+    © 2026 OM Nursing Home | All Rights Reserved | Powered by SD Digital
+</footer>
 
-<form class="shadow p-4 bg-white rounded">
+<script>
+function sendWhatsApp() {
 
-<div class="row">
-<div class="col-md-6 mb-3">
-<label>Patient Name</label>
-<input type="text" class="form-control" required>
-</div>
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var date = document.getElementById("date").value;
+    var problem = document.getElementById("problem").value;
 
-<div class="col-md-6 mb-3">
-<label>Mobile</label>
-<input type="text" class="form-control" required>
-</div>
-</div>
+    var whatsappNumber = "918895094342";
 
-<div class="row">
-<div class="col-md-6 mb-3">
-<label>Email</label>
-<input type="email" class="form-control" required>
-</div>
+    var message = "New Appointment Booking:%0A" +
+                  "Name: " + name + "%0A" +
+                  "Phone: " + phone + "%0A" +
+                  "Date: " + date + "%0A" +
+                  "Problem: " + problem;
 
-<div class="col-md-6 mb-3">
-<label>Select Doctor</label>
-<select class="form-control" required>
-<option>Dr. Sharma</option>
-<option>Dr. Das</option>
-<option>Dr. Patel</option>
-</select>
-</div>
-</div>
+    var url = "https://wa.me/" + whatsappNumber + "?text=" + message;
 
-<div class="row">
-<div class="col-md-6 mb-3">
-<label>Select Date</label>
-<input type="date" class="form-control" required>
-</div>
-
-<div class="col-md-6 mb-3">
-<label>Select Time Slot</label>
-<select class="form-control">
-<option>10:00 AM</option>
-<option>10:30 AM</option>
-<option>11:00 AM</option>
-<option>11:30 AM</option>
-<option>12:00 PM</option>
-</select>
-</div>
-</div>
-
-<div class="mb-3">
-<label>Upload Previous Report</label>
-<input type="file" class="form-control">
-</div>
-
-<button class="btn btn-primary w-100">Submit Appointment</button>
-
-</form>
-</div>
-</section>
-
-<!-- Google Map -->
-<section class="section bg-light text-center">
-<h3>Our Location</h3>
-<iframe src="https://maps.google.com/maps?q=Baripada&t=&z=13&ie=UTF8&iwloc=&output=embed"
-width="100%" height="300" style="border:0;"></iframe>
-</section>
-
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/qr/EEY6KD674WWNM1"
-class="whatsapp" target="_blank">💬</a>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    window.open(url, "_blank");
+}
+</script>
 
 </body>
 </html>
