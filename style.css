@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: #111827;
+}
+
+nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #0ea5e9, #6366f1);
+}
+
+.btn {
+    background: white;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.doctors {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.doctor-card {
+    display: inline-block;
+    margin: 20px;
+    background: #1f2937;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.doctor-card img {
+    border-radius: 50%;
+}
+
+.booking {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea, button {
+    margin: 10px 0;
+    padding: 12px;
+}
+
+button {
+    background: #0ea5e9;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.map {
+    padding: 40px 20px;
+}
+
+.about {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.whatsapp img {
+    width: 30px;
+    height: 30px;
+}
