@@ -1,70 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Om Nursing Home</title>
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    OM NURSING HOME
-</header>
+<div class="container">
+    <h1>Book Appointment</h1>
 
-<section class="hero">
-    <h1>Quality Healthcare You Can Trust</h1>
-    <p>24/7 Emergency | Experienced Doctors | Modern Facilities</p>
-</section>
+    <form>
 
-<section class="section">
-    <h2>Our Services</h2>
-    <div class="services">
-        <div class="service-box">
-            <h3>General Checkup</h3>
-            <p>Complete health examination</p>
+        <div class="row">
+            <div class="input-group">
+                <label>Patient Name</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="input-group">
+                <label>Mobile</label>
+                <input type="text" id="mobile" required>
+            </div>
         </div>
-        <div class="service-box">
-            <h3>Emergency Care</h3>
-            <p>Immediate medical assistance</p>
+
+        <div class="row">
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" id="email">
+            </div>
+
+            <div class="input-group">
+                <label>Select Doctor</label>
+                <select id="doctor">
+                    <option>Dr. Sharma</option>
+                    <option>Dr. Singh</option>
+                    <option>Dr. Patel</option>
+                </select>
+            </div>
         </div>
-        <div class="service-box">
-            <h3>Laboratory</h3>
-            <p>Advanced diagnostic services</p>
+
+        <div class="row">
+            <div class="input-group">
+                <label>Select Date</label>
+                <input type="date" id="date">
+            </div>
+
+            <div class="input-group">
+                <label>Select Time Slot</label>
+                <select id="time">
+                    <option>10:00 AM</option>
+                    <option>12:00 PM</option>
+                    <option>3:00 PM</option>
+                    <option>6:00 PM</option>
+                </select>
+            </div>
         </div>
-    </div>
-</section>
 
-<section class="section">
-    <h2>Book Appointment</h2>
+        <div class="full-width">
+            <label>Upload Previous Report</label>
+            <input type="file" id="report">
+        </div>
 
-    <div class="booking-container">
-        <input type="text" id="name" placeholder="Patient Name" required>
-        <input type="text" id="phone" placeholder="Phone Number" required>
-        <input type="date" id="date" required>
-        <textarea id="problem" placeholder="Describe Problem"></textarea>
-        <button onclick="sendWhatsApp()">Send via WhatsApp</button>
-    </div>
-</section>
+        <button type="button" onclick="sendWhatsApp()">
+            Submit Appointment
+        </button>
 
-<footer>
-    © 2026 OM Nursing Home | All Rights Reserved | Powered by SD Digital
-</footer>
+    </form>
+</div>
 
 <script>
 function sendWhatsApp() {
 
     var name = document.getElementById("name").value;
-    var phone = document.getElementById("phone").value;
+    var mobile = document.getElementById("mobile").value;
+    var email = document.getElementById("email").value;
+    var doctor = document.getElementById("doctor").value;
     var date = document.getElementById("date").value;
-    var problem = document.getElementById("problem").value;
+    var time = document.getElementById("time").value;
 
-    var whatsappNumber = "918895094342";
+    var whatsappNumber = "919876543210"; // 🔴 CHANGE TO YOUR NUMBER
 
     var message = "New Appointment Booking:%0A" +
                   "Name: " + name + "%0A" +
-                  "Phone: " + phone + "%0A" +
+                  "Mobile: " + mobile + "%0A" +
+                  "Email: " + email + "%0A" +
+                  "Doctor: " + doctor + "%0A" +
                   "Date: " + date + "%0A" +
-                  "Problem: " + problem;
+                  "Time: " + time;
 
     var url = "https://wa.me/" + whatsappNumber + "?text=" + message;
 
