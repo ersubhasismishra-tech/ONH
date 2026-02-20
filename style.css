@@ -1,20 +1,144 @@
-body{
-background:#f4f6f9;
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-form{
-background:white;
-border-radius:10px;
+/* ===== BODY ===== */
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f8ff;
+    line-height: 1.6;
 }
 
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-font-size:25px;
-padding:15px;
-border-radius:50%;
-text-decoration:none;
+/* ===== NAVBAR ===== */
+header {
+    background: #0077b6;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* ===== SECTION ===== */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 30px;
+    color: #0077b6;
+}
+
+/* ===== SERVICES ===== */
+.services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-box {
+    background: white;
+    padding: 25px;
+    width: 260px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+}
+
+.service-box h3 {
+    margin-bottom: 10px;
+    color: #0077b6;
+}
+
+/* ===== BOOKING FORM ===== */
+.booking-container {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.booking-container input,
+.booking-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.booking-container textarea {
+    resize: none;
+    height: 100px;
+}
+
+.booking-container button {
+    width: 100%;
+    padding: 12px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.booking-container button:hover {
+    background: #1e7e34;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #0077b6;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
 }
