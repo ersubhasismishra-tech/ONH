@@ -99,4 +99,29 @@ button {
 .whatsapp img {
     width: 30px;
     height: 30px;
+
+}
+
+.call-btn {
+    position: fixed;
+    bottom: 90px; /* Above WhatsApp button */
+    right: 20px;
+    background: #0ea5e9;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.call-btn img {
+    width: 28px;
+    height: 28px;
+}
+
+.call-btn:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
 }
